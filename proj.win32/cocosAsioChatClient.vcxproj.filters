@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mainScene">
+      <UniqueIdentifier>{a86f300c-5b72-4a00-b874-d4f87ba35ac1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mainScene\mainScLayers">
+      <UniqueIdentifier>{5935da2b-7125-45f0-b89a-b3affe80940c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\chatRoomScene">
+      <UniqueIdentifier>{5556b39f-bb8c-4d95-84c5-76a2ba2d580f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\chatRoomScene\chatRoomLayers">
+      <UniqueIdentifier>{c1a10f3c-dfb3-4ef0-8745-529542911b65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\networkClasses">
+      <UniqueIdentifier>{329d4dc2-1043-414f-863c-cacffbd01a19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\commonUILayer">
+      <UniqueIdentifier>{1c874187-8935-459d-99fb-c43a3f051048}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cocosAsioChatClient.cpp">
+      <Filter>src\mainScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\mainScBGLayer.cpp">
+      <Filter>src\mainScene\mainScLayers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\mainScMenuLayer.cpp">
+      <Filter>src\mainScene\mainScLayers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chatRoomScene.cpp">
+      <Filter>src\chatRoomScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chatRoomBGLayer.cpp">
+      <Filter>src\chatRoomScene\chatRoomLayers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\asioChatClient.cpp">
+      <Filter>src\networkClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\networkManager.cpp">
+      <Filter>src\networkClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\popupLayer.cpp">
+      <Filter>src\commonUILayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chatRoomMainLayer.cpp">
+      <Filter>src\chatRoomScene\chatRoomLayers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cocosAsioChatClient.h">
+      <Filter>src\mainScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mainScBGlayer.h">
+      <Filter>src\mainScene\mainScLayers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mainScMenuLayer.h">
+      <Filter>src\mainScene\mainScLayers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chatRoomBGLayer.h">
+      <Filter>src\chatRoomScene\chatRoomLayers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chatRoomScene.h">
+      <Filter>src\chatRoomScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\asioChatClient.h">
+      <Filter>src\networkClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chatProtocol.h">
+      <Filter>src\networkClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\networkManager.h">
+      <Filter>src\networkClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\popupLayer.h">
+      <Filter>src\commonUILayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\commonDataDef.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chatRoomMainLayer.h">
+      <Filter>src\chatRoomScene\chatRoomLayers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
