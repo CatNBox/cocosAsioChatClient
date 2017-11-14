@@ -1,6 +1,7 @@
 #pragma once
 
 #include "cocos2d.h"
+#include "ui\UITextField.h"
 
 class chatRoomMainLayer : public cocos2d::Layer
 {

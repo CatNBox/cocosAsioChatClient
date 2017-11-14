@@ -7,13 +7,13 @@ asioChatClient::asioChatClient(boost::asio::io_service & ioServ)
 	mSocket(ioServ),
 	mIsLogin(false)
 {
-	InitializeCriticalSectionAndSpinCount(&mLock, 4000);
+	//InitializeCriticalSectionAndSpinCount(&mLock, 4000);
 }
 
 asioChatClient::~asioChatClient()
 {
 	//임계구간
-	EnterCriticalSection(&mLock);
+	//EnterCriticalSection(&mLock);
 
 	while (mSendDataQue.empty() == false)
 	{
@@ -21,8 +21,8 @@ asioChatClient::~asioChatClient()
 		mSendDataQue.pop_front();
 	}
 
-	LeaveCriticalSection(&mLock);
-	DeleteCriticalSection(&mLock);
+	//LeaveCriticalSection(&mLock);
+	//DeleteCriticalSection(&mLock);
 	//임계구간종료
 }
 
@@ -64,7 +64,7 @@ void asioChatClient::postSend(const bool isConstantly, const int nSize, char * p
 	char *pSendData = nullptr;
 
 	//임계구간
-	EnterCriticalSection(&mLock);
+	//EnterCriticalSection(&mLock);
 
 	if (isConstantly == false)
 	{
@@ -87,7 +87,7 @@ void asioChatClient::postSend(const bool isConstantly, const int nSize, char * p
 		);
 	}
 
-	LeaveCriticalSection(&mLock);
+	//LeaveCriticalSection(&mLock);
 	//임계구간 종료
 	
 }
@@ -127,7 +127,7 @@ void asioChatClient::handle_connect(const boost::system::error_code & errCode)
 void asioChatClient::handle_write(const boost::system::error_code & errCode, size_t bytes_transferred)
 {
 	//임계구간 시작
-	EnterCriticalSection(&mLock);
+	//EnterCriticalSection(&mLock);
 
 	delete[] mSendDataQue.front();
 	mSendDataQue.pop_front();
@@ -139,7 +139,7 @@ void asioChatClient::handle_write(const boost::system::error_code & errCode, siz
 		pData = mSendDataQue.front();
 	}
 
-	LeaveCriticalSection(&mLock);
+	//LeaveCriticalSection(&mLock);
 	//임계구간 종료
 
 	if (pData != nullptr)
@@ -220,6 +220,7 @@ void asioChatClient::processPacket(const char * pData)
 			loginOk();
 
 			//접속 성공여부 출력
+			cocos2d::log("- 서버 접속성공");
 		}
 		break;
 	case NOTICE_CHAT:
